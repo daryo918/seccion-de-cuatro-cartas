@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(3,300px);
+            grid-template-rows: repeat(4,10rem);
+            justify-items: center;
+        }
+        .box{
+            background-color: teal;
+            position: relative;
+            width: 70px;
+            height: 40px;
+            margin-top: 5px;
+            text-align: center;
+            
+        }
+        .pos1{
+            grid-column: 2/3;
+  
+        }
+        .pos2{
+            grid-row: 2/4;
+            
+        }
+        .pos3{
+            grid-row: 2/4;
+            grid-column: 3/3;
+
+        }
+        .pos4{
+            grid-row: 3/4;
+            grid-column: 2/3;
+ 
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box pos1">1</div>
+        <div class="box pos2">2</div>
+        <div class="box pos3">3</div>
+        <div class="box pos4">4</div>
+    </main>
+</body>
+</html>
+
+<div class="box-element">
+    Supervisor
+    Monitors activity to identify
+    project roadblocks 
+  </div>
+  <div class="box-element">
+    Karma
+    Regularly evaluates our talent to ensure quality
+  </div>
+  <div class="box-element">
+    Calculator
+    Uses data from past projects to provide better delivery
+estimates
+  </div>

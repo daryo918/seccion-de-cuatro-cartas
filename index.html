@@ -8,23 +8,93 @@
     <title>Frontend Mentor | Four card feature section</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    
     <style>
-      .attribution {
-        font-size: 11px;
+      :root{
+        --red: hsl(0, 78%, 62%);
+        --cyan: hsl(180, 62%, 55%);
+        --blue: hsl(212, 86%, 64%);
+        --grayishBlue: hsl(229, 6%, 66%);
+        --veryLightGray: hsl(0, 0%, 98%);
+        --veryDarkBlue:hsl(234, 12%, 34%);
+
+      }
+      body{
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--veryLightGray);
+        font-size: 15px;
+      }
+
+      header{
+        width: 490px;
+        margin: 46px auto;
+      }
+      header .title{
+        display: block;
         text-align: center;
+        font-weight: lighter;
+        font-size: 30px;
       }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
+      header .subtitle{
+        display: block;
+        text-align: center;
+        font-weight:600;
+        font-size: 30px;
+        color:var(--veryDarkBlue);
       }
+      header .description{
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        color:var(--veryDarkBlue);
+      }
+      .boxes-content{
+        display: grid;
+      }
+      .card{
+        border-top-left-radius: 2%;
+        border-top-right-radius: 2%;
+        background-color: white;  
+        width: 300px;
+        padding: 20px;
+      }
+      
+      .card-image{
+        text-align: right;
+        margin-top: 38px;
+        margin-bottom: 10px;
+        padding: 00px 10px 0px;
+      }
+
+      .cyan{
+        border-top: 6px solid var(--cyan);
+      }
+
+
     </style>
+    
   </head>
   <body>
-    Reliable, efficient delivery Powered by Technology Our Artificial
-    Intelligence powered tools use millions of project data points to ensure
-    that your project is successful Supervisor Monitors activity to identify
-    project roadblocks Team Builder Scans our talent network to create the
-    optimal team for your project Karma Regularly evaluates our talent to ensure
-    quality Calculator Uses data from past projects to provide better delivery
-    estimates
+    <header>
+      <span class="title">Reliable, efficient delivery</span>
+      <span class="subtitle">Powered by Technology</span>
+      <span class="description">Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</span>
+    </header>
+    <main>
+   
+    <section class="boxes-content">
+      <div class="card cyan">
+        <h2>Supervisor</h2>
+        Scans our talent network to create the
+        optimal team for your project
+        <div class="card-image">
+          <img src="/images/icon-supervisor.svg" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
   </body>
 </html>
