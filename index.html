@@ -1,90 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <title>Frontend Mentor | Four card feature section</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
-    
-    <style>
-      :root{
-        --red: hsl(0, 78%, 62%);
-        --cyan: hsl(180, 62%, 55%);
-        --blue: hsl(212, 86%, 64%);
-        --grayishBlue: hsl(229, 6%, 66%);
-        --veryLightGray: hsl(0, 0%, 98%);
-        --veryDarkBlue:hsl(234, 12%, 34%);
+  <title>Frontend Mentor | Four card feature section</title>
 
-      }
-      body{
-        font-family: 'Poppins', sans-serif;
-        background-color: var(--veryLightGray);
-        font-size: 15px;
-      }
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
 
-      header{
-        width: 490px;
-        margin: 46px auto;
-      }
-      header .title{
-        display: block;
-        text-align: center;
-        font-weight: lighter;
-        font-size: 30px;
-      }
-      header .subtitle{
-        display: block;
-        text-align: center;
-        font-weight:600;
-        font-size: 30px;
-        color:var(--veryDarkBlue);
-      }
-      header .description{
-        display: block;
-        margin-top: 20px;
-        text-align: center;
-        color:var(--veryDarkBlue);
-      }
-      .boxes-content{
-        display: grid;
-      }
-      .card{
-        border-top-left-radius: 2%;
-        border-top-right-radius: 2%;
-        background-color: white;  
-        width: 300px;
-        padding: 20px;
-      }
+  <style>
+    :root {
+      --red: hsl(0, 78%, 62%);
+      --cyan: hsl(180, 62%, 55%);
+      --blue: hsl(212, 86%, 64%);
+      --grayishBlue: hsl(229, 6%, 66%);
+      --veryLightGray: hsl(0, 0%, 98%);
+      --veryDarkBlue: hsl(234, 12%, 34%);
+      --orange: hsl(34, 97%, 64%);
+
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--veryLightGray);
+      font-size: 15px;
+      padding: 0;
+      margin: 0%;
+    }
+
+    header {
+      width: 490px;
+      margin: 46px auto;
+    }
+
+    header .title {
+      display: block;
+      text-align: center;
+      font-weight: lighter;
+      font-size: 30px;
+    }
+
+    header .subtitle {
+      display: block;
+      text-align: center;
+      font-weight: 600;
+      font-size: 30px;
+      color: var(--veryDarkBlue);
+    }
+
+    header .description {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: var(--veryDarkBlue);
+    }
+    .boxes-content {
+      width: max-content;
+      margin: 0 auto;
+    }
+    .card {
+      border-top-left-radius: 2%;
+      border-top-right-radius: 2%;
+      background-color: white;
+      box-shadow: 0px 10px 10px var(--grayishBlue);
+      height: 230px;
+      padding: 20px;
+    }
+
+    .card-image {
+      text-align: right;
+      margin-top: 38px;
+      margin-bottom: 10px;
+      padding: 0px 10px 0px;
+    }
+
+    .cyan {
+      border-top: 6px solid var(--cyan);
+      grid-row: 2/3;
+      grid-column: 1/1;
+    }
+
+    .red {
+      grid-row: 1;
+      grid-column: 2/3;
+      border-top: 6px solid var(--red);
+    }
+
+    .yellow {
+      grid-row: 3;
+      grid-column: 2/3;
+      border-top: 6px solid var(--orange);
+    }
+
+    .blue {
+      grid-row: 2;
+      grid-column: 3/3;
+      border-top: 6px solid var(--blue);
+      justify-self:left;
+    }
+
+    @media (min-width: 768px) {
+      .boxes-content {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(3, 150px);
+      max-width: 80%;
+      width: max-content;
+      margin: 0 auto;
+      gap: 30px;
       
-      .card-image{
-        text-align: right;
-        margin-top: 38px;
-        margin-bottom: 10px;
-        padding: 00px 10px 0px;
-      }
+    }
 
-      .cyan{
-        border-top: 6px solid var(--cyan);
-      }
+    .card{
+      width: 300px;
+    }
+      
+    }
+  </style>
 
+</head>
 
-    </style>
-    
-  </head>
-  <body>
-    <header>
-      <span class="title">Reliable, efficient delivery</span>
-      <span class="subtitle">Powered by Technology</span>
-      <span class="description">Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</span>
-    </header>
-    <main>
-   
+<body>
+  <header>
+    <span class="title">Reliable, efficient delivery</span>
+    <span class="subtitle">Powered by Technology</span>
+    <span class="description">Our Artificial Intelligence powered tools use millions of project data points to ensure
+      that your project is successful</span>
+  </header>
+  <main>
+
     <section class="boxes-content">
       <div class="card cyan">
         <h2>Supervisor</h2>
@@ -94,7 +143,32 @@
           <img src="/images/icon-supervisor.svg" alt="">
         </div>
       </div>
+      <div class="card red">
+        <h2>Team Builder</h2>
+        Scans our talent network to create the
+        optimal team for your project
+        <div class="card-image">
+          <img src="/images/icon-team-builder.svg" alt="">
+        </div>
+      </div>
+        <div class="card yellow">
+          <h2>Karma</h2>
+          Regularly evaluates our talent to ensure
+          quality
+          <div class="card-image">
+            <img src="/images/icon-karma.svg" alt="">
+          </div>
+        </div>
+        <div class="card blue">
+          <h2>Calculator</h2>
+          Uses data from past projects to provide better delivery
+          estimates
+          <div class="card-image">
+            <img src="/images/icon-calculator.svg" alt="">
+          </div>
+        </div>
     </section>
   </main>
-  </body>
+</body>
+
 </html>
